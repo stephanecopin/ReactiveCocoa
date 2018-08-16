@@ -123,7 +123,7 @@ extension BindingTarget {
 
 internal final class KeyValueObserver: NSObject {
 	typealias Action = (_ object: AnyObject?) -> Void
-	private static let context = UnsafeMutableRawPointer.allocate(bytes: 1, alignedTo: 0)
+	private static let context = UnsafeMutableRawPointer.allocate(byteCount: 1, alignment: 0)
 
 	unowned(unsafe) let unsafeObject: NSObject
 	let key: String

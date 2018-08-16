@@ -44,7 +44,7 @@ class UITextViewSpec: QuickSpec {
 				latestValue = text
 			}
 
-			NotificationCenter.default.post(name: .UITextViewTextDidEndEditing, object: textView)
+			NotificationCenter.default.post(name: UITextViewTextDidEndEditing, object: textView)
 			expect(latestValue) == textView.text
 		}
 
@@ -56,7 +56,7 @@ class UITextViewSpec: QuickSpec {
 				latestValue = text
 			}
 
-			NotificationCenter.default.post(name: .UITextViewTextDidChange, object: textView)
+			NotificationCenter.default.post(name: UITextViewTextDidChange, object: textView)
 			expect(latestValue) == textView.text
 		}
 		
@@ -84,7 +84,7 @@ class UITextViewSpec: QuickSpec {
 				latestValue = attributedText
 			}
 			
-			NotificationCenter.default.post(name: .UITextViewTextDidEndEditing, object: textView)
+			NotificationCenter.default.post(name: UITextViewTextDidEndEditing, object: textView)
 			expect(latestValue) == textView.attributedText
 		}
 		
@@ -96,7 +96,7 @@ class UITextViewSpec: QuickSpec {
 				latestValue = attributedText
 			}
 			
-			NotificationCenter.default.post(name: .UITextViewTextDidChange, object: textView)
+			NotificationCenter.default.post(name: UITextViewTextDidChange, object: textView)
 			expect(latestValue) == textView.attributedText
 		}
 

@@ -26,7 +26,7 @@ class UIKeyboardSpec: QuickSpec {
 					dummyInfo[UIKeyboardIsLocalUserInfoKey] = NSNumber(value: true)
 				}
 				
-				testCenter.post(name: .UIKeyboardWillShow,
+				testCenter.post(name: UIKeyboardWillShow,
 				                object: nil,
 				                userInfo: dummyInfo)
 				
@@ -66,7 +66,7 @@ class UIKeyboardSpec: QuickSpec {
 					return dummyInfo
 				}
 				
-				testCenter.post(name: .UIKeyboardWillShow,
+				testCenter.post(name: UIKeyboardWillShow,
 				                object: nil,
 				                userInfo: makeDummyInfo(beginFrameHeight: 10))
 				
@@ -82,7 +82,7 @@ class UIKeyboardSpec: QuickSpec {
 					expect(context?.isLocal) == true
 				}
 				
-				testCenter.post(name: .UIKeyboardDidShow,
+				testCenter.post(name: UIKeyboardDidShow,
 				                object: nil,
 				                userInfo: makeDummyInfo(beginFrameHeight: 20))
 				
@@ -96,7 +96,7 @@ class UIKeyboardSpec: QuickSpec {
 					expect(context?.isLocal) == true
 				}
 				
-				testCenter.post(name: .UIKeyboardWillHide,
+				testCenter.post(name: UIKeyboardWillHide,
 				                object: nil,
 				                userInfo: makeDummyInfo(beginFrameHeight: 30))
 				
@@ -110,7 +110,7 @@ class UIKeyboardSpec: QuickSpec {
 					expect(context?.isLocal) == true
 				}
 				
-				testCenter.post(name: .UIKeyboardDidHide,
+				testCenter.post(name: UIKeyboardDidHide,
 				                object: nil,
 				                userInfo: makeDummyInfo(beginFrameHeight: 40))
 				
@@ -124,7 +124,7 @@ class UIKeyboardSpec: QuickSpec {
 					expect(context?.isLocal) == true
 				}
 				
-				testCenter.post(name: .UIKeyboardWillChangeFrame,
+				testCenter.post(name: UIKeyboardWillChangeFrame,
 				                object: nil,
 				                userInfo: makeDummyInfo(beginFrameHeight: 50))
 				
@@ -138,7 +138,7 @@ class UIKeyboardSpec: QuickSpec {
 					expect(context?.isLocal) == true
 				}
 				
-				testCenter.post(name: .UIKeyboardDidChangeFrame,
+				testCenter.post(name: UIKeyboardDidChangeFrame,
 				                object: nil,
 				                userInfo: makeDummyInfo(beginFrameHeight: 60))
 				
@@ -174,7 +174,7 @@ class UIKeyboardSpec: QuickSpec {
 					dummyInfo[UIKeyboardIsLocalUserInfoKey] = NSNumber(value: true)
 				}
 
-				testCenter.post(name: .UIKeyboardWillChangeFrame,
+				testCenter.post(name: UIKeyboardWillChangeFrame,
 				                object: nil,
 				                userInfo: dummyInfo)
 
